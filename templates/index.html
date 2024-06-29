@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>RealEstiMate.Inc</title>
+    <meta name="description" content="3D house viewer landing page in three.js - by Neotix">
+    <meta property="og:url" content="https://houses-neotix.vercel.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Dream Houses Landing Page - By Neotix">
+    <meta property="og:description" content="3D house viewer landing page in three.js - by Neotix">
+    <meta property="og:image" content="https://houses-neotix.vercel.app/textures/imageSocial.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="houses-neotix.vercel.app">
+    <meta property="twitter:url" content="https://houses-neotix.vercel.app/">
+    <meta name="twitter:title" content="Dream Houses Landing Page - By Neotix">
+    <meta name="twitter:description" content="3D house viewer landing page in three.js - by Neotix">
+    <meta name="twitter:image" content="https://houses-neotix.vercel.app/textures/imageSocial.jpg">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="www.neotix.com.br">
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width,user-scalable=no,initial-scale=1,shrink-to-fit=no,minimum-scale=1,maximum-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="static/assets/images/0004b432b9cd6516.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/assets/images/b1c442fa9e7058d9.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/assets/images/48d5cc1ad4f0c74b.png">
+    <!-- <link rel="manifest" href="fe4b8e59f3b0328a.webmanifest"> -->
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,600;1,100&family=Libre+Baskerville:wght@700&display=swap"
+        rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amita:wght@400;700&display=swap" rel="stylesheet">
+        
+
+<body id="body">
+    <div class="lds-roller">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="loading-bar"></div>
+    <div id="loading-text-intro">
+        <h4>Please wait...</h4>
+    </div>
+    <div id="btn-continue-explore"><a id="continue"><img src="static/assets/images/56fe1f9a60c03267.svg" alt="back"></a></div>
+    <div id="div-points">
+        <div class="point point-0 visible">
+            <div class="label" id="garden-view"></div>
+            <div class="text">Garden</div>
+        </div>
+        <div class="point point-1 visible">
+            <div class="label" id="interior-view"></div>
+            <div class="text">Interior</div>
+        </div>
+        <div class="point point-2 visible">
+            <div class="label" id="facade-view"></div>
+            <div class="text">Facade</div>
+        </div>
+        <div class="point point-3 visible">
+            <div class="label" id="floor-view"></div>
+            <div class="text">Floor plant</div>
+        </div>
+    </div>
+    <div class="scrollContainer">
+        <div class="headerContainer">
+            <div id="header">
+                <h1 id="logo">⍱ RealEstiMate .Inc</h1>
+                <div id="middle-menu">
+                    
+                    <p id="predict-nav-btn">Predict House Prices</p>
+                </div>
+                <a id="music"><img alt="Music toggle" width="22" height="22"
+                        src="static/assets/images/7e11dcad68999a38.svg"></a>
+            </div>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+            
+                // Get a reference to the button
+                var btn = document.getElementById("predict-nav-btn");
+
+                // Get a reference to the div to scroll to
+                var PredictionDiv = document.getElementById("predictionDiv");
+
+                // Add click event listener to the button
+                btn.addEventListener("click", function() {
+                    // Scroll to the div
+                    PredictionDiv.scrollIntoView({ behavior: "smooth" });
+                });
+            });
+        </script>
+        <div class="sectionContainer">
+            <div class="section" id="section-logo">
+                <h1 data-splitting class="slide-vertical" id="titulo-explorar">Dream<br><span>Houses</span></h1>
+                <p data-splitting class="sub-title">Ready to discover the value of your home or explore real estate opportunities? Try out RealEstiMate today and gain valuable insights into the housing market!
+                    </p><a id="button-scroll"><svg class="svg-circle"
+                        xmlns="http://www.w3.org/2000/svg" width="44" height="44">
+                        <path
+                            d="m27.014 23.731-4.288 3.7V15.166a.686.686 0 1 0-1.372 0v12.26l-4.289-3.7a.687.687 0 0 0-.9 1.039l5.87 5.058 5.87-5.058a.687.687 0 0 0-.9-1.039Z"
+                            fill="#af2f0b" />
+                        <g fill="none" stroke="#af2f0b" stroke-width="1.5">
+                            <circle cx="22" cy="22" r="22" stroke="none" />
+                            <circle cx="22" cy="22" r="21.25" />
+                        </g>
+                    </svg></a>
+            </div>
+            <div class="section" id="section-intro">
+                <h1 id="title-intro"><strong><small>Our Cutting-Edge Technology</small></strong></h1><img
+                    id="img-intro" src="static/images/e3dd8bc497856766.jpeg">
+                <p>RealEstiMate is a Next-gen house price prediction model with a precision of 92%</p>
+                <p>It utilizes advanced machine learning algorithms to provide
+                    accurate estimates of value of your real estate properties</p> 
+                <p>Our mission is to empower homeowners, buyers, and sellers with valuable insights
+                    into the real estate market</strong></p>
+            </div>
+            <div class="section-transition" id="section-transition">
+                <div id="parallax-laguna" data-speed=".5"></div>
+            </div>
+            <div class="section" id="section-concept"><img alt="Perspective Image" id="parallax-img" data-speed=".2"
+                    src="static/images/a7973fe4729ed552.jpeg"> <img alt="Designer" id="parallax" class="img-designer" data-speed=".3"
+                    src="static/images/9fe0ef7f3d12b63e.jpeg">
+                <h2 alt="Company Name" id="parallax" data-speed=".1" style="transform:translate3d(0,-20.2341px,0)">
+                    <p>Our model takes into account various factors such as the number of bedrooms, bathrooms, square footage, location and other features to predict the market value of a house.</p>
+                    <p>By analyzing historical sales data and market trends, we provide reliable estimates that help users understand the current value of their property or make informed decisions regarding buying , selling & Investments in RealEstate </p>
+                    <p><b>Key Features : </b></p>
+                    <p>> Accurate Predictions</p>
+                    <p>> User-Friendly Interface</p>
+                    <p>> Customized Insights</p>
+                    <p>> Interactive Visualization</p>
+                </h2>
+            </div>
+            <div class="section-transition" id="section-transition">
+                <div id="parallax-laguna" data-speed=".5"></div>
+            </div>
+            <div class="section" id="section-predict-house-prices">
+                <h1><large>Machine learning based<strong> house prediction model</strong></large></h1>
+                
+                <!-- <p>You and your family in the house you've always dreamed of. A modern project with full integration of
+                    environments.<br><br><strong>Built under the highest quality standard and surrounded by all safety,
+                        leisure and nature.</strong></p> -->
+                        <!-- <header>
+                            <h1>Machine Learning  <small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;based&nbsp;&nbsp;&nbsp;&nbsp;</small></small></small>🏠 House Price Prediction Model</h1>
+                        </header> -->
+
+                        <link rel="stylesheet" href="static/css/predictionFormStyles.css">
+                        <main id="predictionDiv" class="container">
+                    
+                            <!-- Form for input fields -->
+                           
+                    <form id="predictionForm" class="column">
+                        <label for="beds">Bedrooms:</label>
+                        <select id="beds" name="beds">
+                            <option value="" disabled selected>Select number of bedrooms</option>
+                            {% for bedroom in bedrooms %}
+                                <option value="{{ bedroom }}">{{ bedroom }}</option>
+                            {% endfor %}
+                        </select>
+                    
+                        <label for="baths">Baths:</label>
+                        <select id="baths" name="baths">
+                            <option value="" disabled selected>Select number of bathrooms</option>
+                            {% for bathroom in bathrooms %}
+                                <option value="{{ bathroom }}">{{ bathroom }}</option>
+                            {% endfor %}
+                        </select>
+                    
+                        <label for="size">Size:</label>
+                        <select id="size" name="size">
+                            <option value="" disabled selected>Select size of the house</option>
+                            {% for house_size in sizes %}
+                                <option value="{{ house_size }}">{{ house_size }} sqft</option>
+                            {% endfor %}
+                        </select>
+                    
+                        <label for="zip_code">Zip Code:</label>
+                        <select id="zip_code" name="zip_code">
+                            <option value="" disabled selected>Select zip code</option>
+                            {% for zip_code in zip_codes %}
+                                <option value="{{ zip_code }}">{{ zip_code }}</option>
+                            {% endfor %}
+                        </select>
+                    
+                        <!-- Predict Price button -->
+                        <button type="button" onclick="sendData()">Predict Price</button>
+                    
+                        <!-- Space for displaying predicted price -->
+                        <div id="predictedPrice"></div>
+                    </form>
+
+                    <iframe class="column" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52924059.64213272!2d-161.87206138617!3d35.94138596545394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited%20States!5e0!3m2!1sen!2sin!4v1710662237921!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    
+                    
+                        </main>
+            </div>
+        </div>
+        
+        <div class="footerContainer">
+            <div id="footer">
+                <h2>⍱ RealEstiMate .Inc</h2>
+                <p>Created and develped with love by Mradul & Team. <a href="https://www.neotix.com.br"
+                        target="_blank">@medicaps</a></p>
+            </div>
+        </div>
+        <div id="canvas-container" class="fixed"><a id="button-zoom"><img alt="Explore"
+                    src="static/assets/images/e0e86d565eeb4c9d.svg"></a></div>
+    </div>
+   
+    
+
+    <script>
+        // JavaScript function to fetch options for dropdowns
+        function fetchOptions(endpoint, dropdownId) {
+            fetch(endpoint)
+                .then(response => response.json())
+                .then(data => {
+                    const dropdown = document.getElementById(dropdownId);
+                    dropdown.innerHTML = '<option value="" disabled selected>Select an option</option>';
+                    data.forEach(option => {
+                        const optionElement = document.createElement('option');
+                        optionElement.value = option;
+                        optionElement.textContent = option;
+                        dropdown.appendChild(optionElement);
+                    });
+                });
+        }
+
+        // Fetch options for each dropdown on page load
+        window.onload = function() {
+            fetchOptions('/bedrooms', 'beds');
+            fetchOptions('/bathrooms', 'baths');
+            fetchOptions('/sizes', 'size');
+            fetchOptions('/zip_codes', 'zip_code');
+        };
+
+        // JavaScript function to send data and receive predicted price
+        function sendData() {
+            const form = document.getElementById('predictionForm');
+            const formData = new FormData(form);
+
+            fetch('/predict', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(price => {
+                document.getElementById("predictedPrice").innerHTML = "Price: USD($) " + price;
+            });
+        }
+    </script>
+</body>
+<script defer="defer" src="static/js/bundle.499b5dcd521e9a8d.min.js"></script>
+<link href="static/css/main.css" rel="stylesheet">
+</head>
+
+</html>
