@@ -1,6 +1,9 @@
 from flask import Flask, render_template, request, jsonify
 import pandas as pd
 import pickle
+import os
+
+port = int(os.environ.get('PORT', 5000))
 
 app = Flask(__name__)
 data = pd.read_csv('final_dataset.csv')
@@ -97,8 +100,8 @@ def predict():
     return str(prediction)
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=port, host='0.0.0.0')
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=port, host='0.0.0.0')
